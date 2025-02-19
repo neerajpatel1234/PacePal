@@ -52,15 +52,8 @@ get_user_input()
 # Set the marathon date (YYYY, MM, DD)
 marathon_date = datetime.date(2025, 4, 20)
 
-# Schedule tasks
-schedule.every().day.at("07:00").do(training_plan)
-schedule.every().day.at("12:00").do(nutrition_tip)
-schedule.every().hour.do(hydration_reminder)
-schedule.every().day.at("18:00").do(motivation_boost)
+
 
 print("Marathon Preparation Bot is running...\n")
 
-# Keep the bot running
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+
